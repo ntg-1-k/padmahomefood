@@ -1,0 +1,3 @@
+service : {
+  getRestaurantName: () -> (text) query;
+}

@@ -1,0 +1,25 @@
+{
+  "overview": "A premium 3D website for Padma Home Food, a cloud kitchen in Secunderabad offering South Indian, North Indian, and Street Food. Features an immersive animated hero with floating food particles, a complete categorized menu with high-quality food photography, and one-tap ordering via WhatsApp and Zomato.",
+  "features": [
+    "Animated 3D hero with floating food particle system",
+    "Complete menu with 25 items across 5 categories",
+    "Real-time menu search and category filtering",
+    "WhatsApp chat and call buttons",
+    "Zomato order integration",
+    "Restaurant info: ratings, address, FSSAI license",
+    "Mobile-optimized responsive design",
+    "Premium dark/warm color theme"
+  ],
+  "category": "food-restaurant",
+  "tags": [
+    "cloud-kitchen",
+    "restaurant",
+    "3d",
+    "menu",
+    "south-indian",
+    "food",
+    "whatsapp",
+    "zomato"
+  ],
+  "last_updated": "2026-05-10T18:32:37.386Z"
+}

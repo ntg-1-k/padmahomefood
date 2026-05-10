@@ -1,0 +1,125 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: "Lora";
+  src: url("/assets/fonts/Lora.woff2") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "General Sans";
+  src: url("/assets/fonts/GeneralSans.woff2") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "JetBrains Mono";
+  src: url("/assets/fonts/JetBrainsMono.woff2") format("woff2");
+  font-display: swap;
+}
+
+html,
+body {
+  height: 100%;
+}
+#root {
+  min-height: 100dvh;
+  overflow-x: hidden;
+}
+
+@layer base {
+  :root {
+    --font-display: "Lora", serif;
+    --font-body: "General Sans", sans-serif;
+    --font-mono: "JetBrains Mono", monospace;
+    --radius: 0.75rem;
+    --background: 0.04 0.005 0;
+    --foreground: 0.92 0.01 0;
+    --card: 0.08 0.008 0;
+    --card-foreground: 0.92 0.01 0;
+    --popover: 0.08 0.008 0;
+    --popover-foreground: 0.92 0.01 0;
+    --primary: 0.68 0.18 25;
+    --primary-foreground: 0.98 0.002 0;
+    --secondary: 0.65 0.15 35;
+    --secondary-foreground: 0.98 0.002 0;
+    --muted: 0.13 0.008 0;
+    --muted-foreground: 0.55 0.01 30;
+    --accent: 0.7 0.16 20;
+    --accent-foreground: 0.98 0.002 0;
+    --destructive: 0.62 0.22 25;
+    --destructive-foreground: 0.98 0.005 0;
+    --border: 0.12 0.01 0;
+    --input: 0.12 0.01 0;
+    --ring: 0.7 0.16 20;
+    --chart-1: 0.7 0.16 20;
+    --chart-2: 0.65 0.15 35;
+    --chart-3: 0.6 0.14 15;
+    --chart-4: 0.68 0.18 25;
+    --chart-5: 0.72 0.16 10;
+    --sidebar: 0.08 0.008 0;
+    --sidebar-foreground: 0.92 0.01 0;
+    --sidebar-primary: 0.68 0.18 25;
+    --sidebar-primary-foreground: 0.98 0.002 0;
+    --sidebar-accent: 0.13 0.008 0;
+    --sidebar-accent-foreground: 0.92 0.01 0;
+    --sidebar-border: 0.12 0.01 0;
+    --sidebar-ring: 0.7 0.16 20;
+    --gradient-warm: linear-gradient(
+      135deg,
+      oklch(0.68 0.18 25) 0%,
+      oklch(0.6 0.14 15) 50%,
+      oklch(0.04 0.005 0) 100%
+    );
+    --shadow-elevated: 0 20px 40px oklch(0 0 0 / 0.4);
+    --shadow-card: 0 8px 16px oklch(0 0 0 / 0.25);
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+    font-family: var(--font-body);
+  }
+}
+@layer utilities {
+  .font-display {
+    font-family: var(--font-display);
+  }
+
+  .font-body {
+    font-family: var(--font-body);
+  }
+
+  .gradient-warm {
+    background: var(--gradient-warm);
+  }
+
+  .shadow-elevated {
+    box-shadow: var(--shadow-elevated);
+  }
+
+  .shadow-card {
+    box-shadow: var(--shadow-card);
+  }
+
+  .transition-smooth {
+    transition: var(--transition-smooth);
+  }
+
+  .glass-card {
+    @apply backdrop-blur-md border shadow-card transition-smooth;
+    background: oklch(var(--card) / 0.4);
+    border-color: oklch(1 0 0 / 0.05);
+  }
+
+  .spice-glow {
+    @apply shadow-card relative;
+    box-shadow: 0 0 24px oklch(0.68 0.18 25 / 0.15), inset 0 1px 0
+      oklch(255 255 255 / 0.1);
+  }
+}
