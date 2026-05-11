@@ -78,17 +78,7 @@ export default function MenuScreen({ onStart }: Props) {
         </div>
       </div>
 
-      <footer className="absolute bottom-4 text-[#A9B3BD] text-xs drop-shadow-[0_1px_4px_rgba(0,0,0,0.8)]">
-        © {new Date().getFullYear()}. Built with love using{" "}
-        <a
-          href={`https://caffeine.ai?utm_source=caffeine-footer&utm_medium=referral&utm_content=${encodeURIComponent(window.location.hostname)}`}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="text-[#E0A14C] hover:underline"
-        >
-          caffeine.ai
-        </a>
-      </footer>
+    
     </div>
   );
 }
